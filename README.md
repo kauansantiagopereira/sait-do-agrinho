@@ -4,25 +4,25 @@ Olá! Este é o repositório do projeto desenvolvido para o **Programa Agrinho**
 
 ---
 
-## 📋 Sobre o Projeto (Saiba Mais)
+## 📋 Sobre o Projeto
 
-O projeto foi criado com o objetivo de [explique aqui o objetivo principal, ex: conscientizar sobre a sustentabilidade no campo / ajudar o pequeno produtor a gerenciar seus gastos]. 
+O projeto foi criado com o objetivo de **[explique aqui o objetivo principal, ex: conscientizar sobre a sustentabilidade no campo / ajudar o pequeno produtor a gerenciar seus gastos]**. 
 
-Buscamos unir a tecnologia com as práticas agrícolas para resolver o problema de [cite o problema que seu projeto resolve].
+Buscamos unir a tecnologia com as práticas agrícolas para resolver o problema de **[cite o problema que seu projeto resolve, ex: desperdício de água na irrigação / falta de controle de pragas]**.
 
 ### 🚀 Funcionalidades Principais
-* **[Funcionalidade 1]:** [Breve descrição, ex: Gráficos sobre o uso de água].
-* **[Funcionalidade 2]:** [Breve descrição, ex: Quiz interativo sobre solo saudável].
-* **[Funcionalidade 3]:** [Breve descrição, ex: Calculadora de adubo].
+* **[Funcionalidade 1]:** [Breve descrição, ex: Gráficos interativos sobre o uso de água].
+* **[Funcionalidade 2]:** [Breve descrição, ex: Quiz educativo sobre solo saudável e sustentabilidade].
+* **[Funcionalidade 3]:** [Breve descrição, ex: Calculadora inteligente de adubo para evitar desperdícios].
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-Este programa foi desenvolvido utilizando as seguintes tecnologias:
-* **Linguagem:** [Ex: Python, JavaScript, Scratch]
-* **Interface/Design:** [Ex: HTML/CSS, Tkinter, Figma]
-* **Ferramentas:** Git e GitHub
+Este programa foi desenvolvido utilizando as seguintes ferramentas:
+* **Front-End:** HTML5, CSS3 e JavaScript
+* **Design/Prototipagem:** [Ex: Figma, Canva ou desenhado à mão]
+* **Controle de Versão:** Git e GitHub
 
 ---
 
@@ -30,6 +30,7 @@ Este programa foi desenvolvido utilizando as seguintes tecnologias:
 
 Se você quiser testar o projeto no seu computador, siga os passos abaixo:
 
-1. Clone este repositório:
+1. **Clone este repositório:**
    ```bash
    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+   
