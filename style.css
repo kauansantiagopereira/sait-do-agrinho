@@ -1,3 +1,19 @@
+/* Variáveis Globais de Design */
+:root {
+    --primary-color: #2e7d32;     /* Verde Agro */
+    --primary-dark: #1b5e20;      /* Verde Escuro */
+    --primary-light: #81c784;     /* Verde Claro */
+    --accent-color: #a5d6a7;      /* Verde de Destaque (Hover) */
+    --bg-main: #f4f7f5;           /* Fundo da Página */
+    --bg-card: #ffffff;           /* Fundo dos Cards */
+    --text-main: #333333;         /* Texto Principal */
+    --text-muted: #555555;        /* Texto Secundário */
+    --text-light: #ffffff;        /* Texto Claro */
+    --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --shadow-strong: 0 8px 25px rgba(0, 0, 0, 0.1);
+    --transition-fast: 0.3s ease;
+}
+
 /* Configurações Globais */
 * {
     margin: 0;
@@ -6,9 +22,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth; /* Deslizamento suave ao clicar na navegação */
+}
+
 body {
-    background-color: #f4f7f5;
-    color: #333;
+    background-color: var(--bg-main);
+    color: var(--text-main);
     line-height: 1.6;
 }
 
@@ -16,157 +36,19 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 /* Cabeçalho (Hero Section) */
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200') no-repeat center center/cover;
-    color: #ffffff;
-    padding: 100px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200') no-repeat center center/cover;
+    color: var(--text-light);
+    padding: 120px 0; /* Um pouco mais de respiro */
     text-align: center;
 }
 
 header h1 {
     font-size: 2.8rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-}
-
-header p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-}
-
-/* Menu de Navegação */
-nav {
-    background-color: #2e7d32; /* Verde Agro */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #a5d6a7; /* Verde claro ao passar o mouse */
-}
-
-/* Seções Gerais */
-section {
-    padding: 60px 0;
-}
-
-section h2 {
-    text-align: center;
-    color: #1b5e20;
-    font-size: 2.2rem;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-section h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #81c784;
-    margin: 10px auto 0 auto;
-    border-radius: 2px;
-}
-
-/* Seção Sobre */
-#sobre p {
-    font-size: 1.1rem;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #555;
-}
-
-/* Seção de Práticas (Cards) */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 5px solid #4caf50;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.card-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    color: #2e7d32;
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-}
-
-.card p {
-    color: #666;
-    font-size: 1rem;
-}
-
-/* Rodapé */
-footer {
-    background-color: #1b5e20;
-    color: #ffffff;
-    text-align: center;
-    padding: 30px 0;
-    margin-top: 40px;
-}
-
-footer p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-/* Responsividade para celulares */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    nav ul li {
-        margin: 10px 0;
-    }
-}
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 8px rgba(0,
