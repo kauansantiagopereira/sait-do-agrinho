@@ -21,7 +21,7 @@ Buscamos unir a tecnologia com as práticas agrícolas para resolver o problema 
 
 Este programa foi desenvolvido utilizando as seguintes ferramentas:
 * **Front-End:** HTML5, CSS3 e JavaScript
-* **Design/Prototipagem:** [Ex: Figma, Canva ou desenhado à mão]
+* **Design/Prototipagem:** [Ex: Figma, Canva]
 * **Controle de Versão:** Git e GitHub
 
 ---
@@ -32,5 +32,13 @@ Se você quiser testar o projeto no seu computador, siga os passos abaixo:
 
 1. **Clone este repositório:**
    ```bash
-   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-   
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   ```
+
+2. **Acesse a pasta do projeto:**
+   ```bash
+   cd seu-repositorio
+   ```
+
+3. **Abra o arquivo principal:**
+   * Basta dar um duplo clique no arquivo `index.html` para abrir o projeto no seu navegador.
