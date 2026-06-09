@@ -1,15 +1,114 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sustentabilidade no Campo - Agrinho</title>
-    <!-- Link para o seu arquivo de estilo -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container hero-content">
+            <h1>Agro Forte e Futuro Sustentável</h1>
+            <p>O equilíbrio perfeito entre a produção no campo e a preservação do meio ambiente.</p>
+            <a href="#praticas" class="btn-principal">Conhecer Práticas</a>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-leaf"></i> Agrinho <span>Sustentável</span>
+            </div>
+            <ul>
+                <li><a href="#sobre"><i class="fa-solid fa-circle-info"></i> Sobre</a></li>
+                <li><a href="#praticas"><i class="fa-solid fa-seedling"></i> Práticas</a></li>
+                <li><a href="#contato"><i class="fa-solid fa-envelope"></i> Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="sobre" class="container">
+        <div class="section-title">
+            <h2>A Conexão Campo e Cidade</h2>
+            <div class="linha-decorativa"></div>
+        </div>
+        <div class="sobre-conteudo">
+            <p>A agricultura moderna tem o desafio de produzir alimentos de qualidade preservando os recursos naturais para as próximas gerações. O futuro do agro depende diretamente de tecnologias limpas, da conservação do solo, do respeito à biodiversidade e do uso consciente da água.</p>
+        </div>
+    </section>
+
+    <section id="praticas" class="bg-claro">
+        <div class="container">
+            <div class="section-title">
+                <h2>Práticas Sustentáveis</h2>
+                <div class="linha-decorativa"></div>
+            </div>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-arrows-spin"></i>
+                    </div>
+                    <h3>Rotação de Culturas</h3>
+                    <p>Técnica milenar e tecnológica que ajuda a manter o solo fértil, quebra o ciclo de pragas e evita o desgaste desnecessário da terra.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <h3>Energia Solar</h3>
+                    <p>Uso de fontes limpas e renováveis para gerar eletricidade, economizando recursos financeiros e reduzindo a pegada de carbono no campo.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                    </div>
+                    <h3>Agricultura de Precisão</h3>
+                    <p>Uso de tecnologia de ponta, drones e sensores para otimizar o plantio, aplicar insumos apenas onde é necessário e diminuir desperdícios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="container">
+        <div class="section-title">
+            <h2>Fale Conosco</h2>
+            <div class="linha-decorativa"></div>
+        </div>
+        
+        <div class="contato-container">
+            <p class="contato-texto">Tem alguma dúvida sobre o projeto ou quer compartilhar uma ideia sustentável? Envie uma mensagem para nós!</p>
+            
+            <form class="form-contato" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso! (Simulação)');">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="seu-email@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                </div>
+                <button type="submit"
+                    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustentabilidade no Campo - Agrinho</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Cabeçalho do Site -->
     <header>
         <div class="container">
             <h1>Agro Forte e Futuro Sustentável</h1>
@@ -17,7 +116,6 @@
         </div>
     </header>
 
-    <!-- Navegação principal -->
     <nav>
         <div class="container">
             <ul>
@@ -28,13 +126,11 @@
         </div>
     </nav>
 
-    <!-- Seção Sobre -->
     <section id="sobre" class="container">
         <h2>A Conexão Campo e Cidade</h2>
         <p>A agricultura moderna tem o desafio de produzir alimentos de qualidade preservando os recursos naturais. O futuro do agro depende de tecnologias limpas, conservação do solo e uso consciente da água.</p>
     </section>
 
-    <!-- Seção de Práticas -->
     <section id="praticas" class="container">
         <h2>Práticas Sustentáveis</h2>
         <div class="cards">
@@ -53,7 +149,6 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer id="contato">
         <div class="container">
             <p>Projeto Desenvolvido para o Concurso Agrinho. &copy; 2026</p>
