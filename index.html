@@ -12,6 +12,7 @@
             --cor-fundo: #f4f6f4;
             --cor-texto: #333333;
             --cor-card: #ffffff;
+            --cor-borda: #e0e0e0;
         }
 
         body {
@@ -27,13 +28,14 @@
             background-color: var(--cor-primaria);
             color: white;
             text-align: center;
-            padding: 2rem 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2.5rem 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.6rem;
+            letter-spacing: 0.5px;
         }
 
         header p {
@@ -50,127 +52,23 @@
 
         section {
             background: var(--cor-card);
-            padding: 1.5rem;
+            padding: 2rem;
             margin-bottom: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            border: 1px solid var(--cor-borda);
         }
 
         h2 {
             color: var(--cor-secundaria);
             border-bottom: 2px solid var(--cor-primaria);
-            padding-bottom: 0.3rem;
+            padding-bottom: 0.5rem;
             margin-top: 0;
+            font-size: 1.6rem;
         }
 
-        .status-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .card-status {
-            background: #e8f5e9;
-            border-left: 5px solid var(--cor-primaria);
-            padding: 1rem;
-            border-radius: 4px;
-            text-align: center;
-        }
-
-        .card-status h3 {
-            margin: 0 0 0.5rem 0;
-            font-size: 1rem;
-            color: #555;
-        }
-
-        .card-status p {
-            margin: 0;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--cor-secundaria);
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            background-color: #333;
-            color: white;
-            font-size: 0.9rem;
-            margin-top: 3rem;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>🌱 Projeto Agrinho 2026</h1>
-        <p>Inovação e Sustentabilidade no Campo</p>
-    </header>
-
-    <main>
-        <section id="sobre">
-            <h2>📝 Sobre o Projeto</h2>
-            <p>
-                Esta página apresenta a solução tecnológica desenvolvida para o Concurso Agrinho deste ano. 
-                Nosso objetivo é resolver problemas reais do campo utilizando tecnologia acessível, 
-                promovendo a sustentabilidade e a eficiência na agricultura.
-            </p>
-        </section>
-
-        <section id="monitoramento">
-            <h2>📊 Monitoramento em Tempo Real</h2>
-            <p>Abaixo estão os dados simulados dos sensores do nosso projeto:</p>
-            
-            <div class="status-container">
-                <div class="card-status">
-                    <h3>Umidade do Solo</h3>
-                    <p id="umidade">45%</p>
-                </div>
-                <div class="card-status">
-                    <h3>Temperatura</h3>
-                    <p id="temperatura">26°C</p>
-                </div>
-                <div class="card-status">
-                    <h3>Status da Irrigação</h3>
-                    <p id="status-bomba" style="color: #2e7d32;">Desligada</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="tecnologias">
-            <h2>🛠️ Tecnologias Utilizadas</h2>
-            <ul>
-                <li><strong>HTML5 & CSS3:</strong> Para a construção desta interface responsiva.</li>
-                <li><strong>JavaScript (opcional):</strong> Para a lógica de exibição dos dados.</li>
-                <li><strong>Hardware/Linguagem Principal:</strong> (Ex: Arduino, Python, etc. - altere aqui).</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>Desenvolvido para o Concurso Agrinho 2026 | Colégio Estadual ...</p>
-    </footer>
-
-    <script>
-        // Exemplo: Função que muda os valores na tela simulando um sensor real
-        function atualizarDadosSimulados() {
-            const umidadeAleatoria = Math.floor(Math.random() * (80 - 30) + 30);
-            document.getElementById('umidade').innerText = umidadeAleatoria + "%";
-            
-            const statusBomba = document.getElementById('status-bomba');
-            if (umidadeAleatoria < 40) {
-                statusBomba.innerText = "Ligada 💧";
-                statusBomba.style.color = "#d32f2f"; // Vermelho / Alerta
-            } else {
-                statusBomba.innerText = "Desligada ✅";
-                statusBomba.style.color = "#2e7d32"; // Verde
-            }
-        }
-
-        // Atualiza a cada 4 segundos
-        setInterval(atualizarDadosSimulados, 4000);
-    </script>
-</body>
-</html>
-<img src="nome_da_imagem.jpg" alt="Descrição da imagem do Agrinho" width="300">
+        /* Melhoria na seção Sobre para alinhar texto e imagem */
+        .sobre-conteudo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1
