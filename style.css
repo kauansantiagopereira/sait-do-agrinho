@@ -1,81 +1,33 @@
-/* Configurações Gerais */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f9f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #2e7d32; /* Verde Agrinho */
-    color: white;
-    text-align: center;
-    padding: 2rem;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-}
-
-/* Cartão Principal */
-.card {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    text-align: center;
-}
-
-.btn {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background-color: #388e3c;
-}
-
-/* Estilo do Modal (Escondido por padrão) */
+/* O fundo do modal (ocupa a tela inteira e fica semi-transparente) */
 .modal {
-    display: none; 
+    display: none; /* Mantém o modal escondido no início */
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurinho */
 }
 
+/* A caixinha com o conteúdo que fica centralizada */
 .modal-conteudo {
-    background-color: white;
+    background-color: #fff;
     margin: 15% auto;
     padding: 20px;
     border-radius: 8px;
     width: 80%;
-    max-width: 400px;
+    max-width: 500px;
     position: relative;
 }
 
+/* O botão de fechar (X) */
 .fechar {
     position: absolute;
-    right: 15px;
     top: 10px;
-    font-size: 28px;
-    font-weight: bold;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
     cursor: pointer;
-}
-
-.fechar:hover {
-    color: #2e7d32;
 }
