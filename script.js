@@ -1,24 +1,35 @@
-// 1. Seleciona os elementos do HTML que vamos usar
+// 1. Seleção dos elementos do DOM
 const modal = document.getElementById("modalSustentabilidade");
 const btnSaibaMais = document.getElementById("btnSaibaMais");
 const btnFechar = document.querySelector(".fechar");
 
-// 2. Função para abrir o modal
-btnSaibaMais.addEventListener("click", () => {
-    modal.style.display = "block"; // Mostra o modal na tela
-    modal.setAttribute("aria-hidden", "false"); // Atualiza a acessibilidade
-});
+// 2. Funções de controle do Modal
+const abrirModal = () => {
+    modal.classList.add("ativo"); // Adiciona a classe que mostra o modal
+    modal.setAttribute("aria-hidden", "false");
+    btnFechar.focus(); // Foca no botão de fechar para ajudar a acessibilidade
+};
 
-// 3. Função para fechar o modal ao clicar no 'X'
-btnFechar.addEventListener("click", () => {
-    modal.style.display = "none"; // Esconde o modal
-    modal.setAttribute("aria-hidden", "true"); // Atualiza a acessibilidade
-});
+const fecharModal = () => {
+    modal.classList.remove("ativo"); // Remove a classe e esconde o modal
+    modal.setAttribute("aria-hidden", "true");
+    btnSaibaMais.focus(); // Devolve o foco para o botão que abriu o modal
+};
 
-// 4. Bônus: Fecha o modal se o usuário clicar em qualquer lugar fora da caixinha branca
+// 3. Ouvintes de Eventos (Event Listeners)
+btnSaibaMais.addEventListener("click", abrirModal);
+btnFechar.addEventListener("click", fecharModal);
+
+// Fecha o modal ao clicar fora da caixinha branca
 window.addEventListener("click", (event) => {
     if (event.target === modal) {
-        modal.style.display = "none";
-        modal.setAttribute("aria-hidden", "true");
+        fecharModal();
+    }
+});
+
+// Acessibilidade: Fecha o modal ao apertar a tecla 'Escape' (Esc)
+window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("ativo")) {
+        fecharModal();
     }
 });
