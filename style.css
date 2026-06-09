@@ -15,74 +15,67 @@ header {
 }
 
 .container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
 }
 
+/* Cartão Principal */
 .card {
-    background: white;
+    background-color: white;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    text-align: center;
 }
 
-/* Botão Bonitão */
 .btn {
-    background-color: #2e7d32;
+    background-color: #4caf50;
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 .btn:hover {
-    background-color: #1b5e20;
+    background-color: #388e3c;
 }
 
-/* --- ESTILO DO MODAL (SAIBA MAIS) --- */
+/* Estilo do Modal (Escondido por padrão) */
 .modal {
-    display: none; /* Escondido por padrão */
+    display: none; 
     position: fixed;
-    top: 0;
+    z-index: 1;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    background-color: rgba(0,0,0,0.5);
 }
 
 .modal-conteudo {
     background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: 500px;
-    width: 90%;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
     position: relative;
-    animation: abrirModal 0.4s ease;
 }
 
-/* Botão de Fechar (X) */
 .fechar {
     position: absolute;
-    top: 10px;
     right: 15px;
-    font-size: 1.5rem;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
-    color: #aaa;
 }
 
 .fechar:hover {
-    color: #000;
-}
-
-/* Animação para o modal aparecer suavemente */
-@keyframes abrirModal {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    color: #2e7d32;
 }
