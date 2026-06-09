@@ -1,106 +1,124 @@
-/* Configurações Gerais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* ==========================================================================
+   1. VARIÁVEIS DE CORES E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+:root {
+    --bg-main: #0d1117;       /* Fundo principal (padrão GitHub Dark) */
+    --bg-card: #161b22;       /* Fundo dos cards e seções */
+    --border-color: #30363d;  /* Bordas sutis */
+    --text-main: #c9d1d9;     /* Texto principal */
+    --text-muted: #8b949e;    /* Texto secundário/legendas */
+    --accent: #58a6ff;        /* Cor de destaque (Azul GitHub) */
+    --accent-hover: #1f6feb;  /* Azul mais escuro para hover */
+    --success: #238636;       /* Verde para botões de sucesso */
+    --radius: 8px;            /* Arredondamento padrão */
+    --transition: all 0.3s ease;
 }
 
+/* Reset básico e tipografia */
 body {
-    background-color: #f4f9f4;
-    color: #333;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     line-height: 1.6;
+    margin: 0;
+    padding: 20px;
 }
 
-/* Cabeçalho */
-header {
-    background-color: #2e7d32; /* Verde folha escuro */
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Layout Container */
+/* ==========================================================================
+   2. CARDS E SEÇÕES (Ex: Seção de Projetos ou Sobre Mim)
+   ========================================================================== */
 .container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-/* Estilização dos Cards */
 .card {
-    background: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    border-left: 5px solid #4caf50; /* Detalhe em verde */
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: var(--transition);
 }
 
-.card h2 {
-    color: #2e7d32;
-    margin-bottom: 1rem;
+/* Efeito de levitação ao passar o mouse */
+.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-.card ul {
-    list-index.html-style: none;
-    padding-left: 0.5rem;
+/* ==========================================================================
+   3. TIPOGRAFIA E LINKS
+   ========================================================================== */
+h1, h2, h3 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 0;
 }
 
-.card li {
-    margin-bottom: 0.5rem;
-    position: relative;
-    padding-left: 1.5rem;
+h1 {
+    font-size: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
 }
 
-.card li::before {
-    content: "🌱";
-    position: absolute;
-    left: 0;
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: var(--transition);
 }
 
-/* Botão e Interatividade */
-button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 5px;
+a:hover {
+    text-decoration: underline;
+    color: var(--accent-hover);
+}
+
+/* ==========================================================================
+   4. BOTÕES ESTILO GITHUB
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 1rem;
+    transition: var(--transition);
 }
 
-button:hover {
-    background-color: #388e3c;
+.btn:hover {
+    background-color: #30363d;
+    border-color: #8b949e;
 }
 
-#resultado {
-    margin-top: 1rem;
-    padding: 1rem;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
+.btn-primary {
+    background-color: var(--success);
+    color: #ffffff;
+    border: 1px solid rgba(240, 246, 252, 0.1);
 }
 
-/* Status do Simulador */
-.status-neutro { background-color: #e0e0e0; color: #616161; }
-.status-seco { background-color: #ffe0b2; color: #e65100; border: 1px solid #b5651d; }
-.status-ideal { background-color: #c8e6c9; color: #1b5e20; }
+.btn-primary:hover {
+    background-color: #2ea44f;
+    border-color: rgba(240, 246, 252, 0.1);
+}
 
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: #333;
-    color: white;
-    font-size: 0.9rem;
-    margin-top: 3rem;
+/* ==========================================================================
+   5. BADGES / TAGS DE TECNOLOGIAS
+   ========================================================================== */
+.badge {
+    display: inline-block;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    white-space: nowrap;
+    border: 1px solid var(--border-color);
+    border-radius: 2em;
+    background-color: #1f242c;
+    color: var(--accent);
+    margin-right: 6px;
 }
