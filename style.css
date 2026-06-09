@@ -1,61 +1,88 @@
-/* ==========================================================================
-   1. VARIÁVEIS DE CORES E CONFIGURAÇÕES GERAIS
-   ========================================================================== */
-:root {
-    --bg-main: #0d1117;       /* Fundo principal (padrão GitHub Dark) */
-    --bg-card: #161b22;       /* Fundo dos cards e seções */
-    --border-color: #30363d;  /* Bordas sutis */
-    --text-main: #c9d1d9;     /* Texto principal */
-    --text-muted: #8b949e;    /* Texto secundário/legendas */
-    --accent: #58a6ff;        /* Cor de destaque (Azul GitHub) */
-    --accent-hover: #1f6feb;  /* Azul mais escuro para hover */
-    --success: #238636;       /* Verde para botões de sucesso */
-    --success-hover: #2ea44f; /* Verde mais claro para hover */
-    --radius: 8px;            /* Arredondamento padrão */
-    
-    /* Transições otimizadas (evite usar 'all' por performance) */
-    --transition-speed: 0.2s;
-    --transition-timing: ease-in-out;
-}
-
-/* Reset básico e tipografia */
-*, *::before, *::after {
-    box-sizing: border-box; /* Garante que padding não quebre o layout */
-}
-
+/* Configurações Gerais */
 body {
-    background-color: var(--bg-main);
-    color: var(--text-main);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f9f4;
+    color: #333;
     margin: 0;
-    padding: 1.25rem;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
+    padding: 0;
 }
 
-/* Acessibilidade: Melhora o foco para quem navega via teclado */
-:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
+header {
+    background-color: #2e7d32; /* Verde Agrinho */
+    color: white;
+    text-align: center;
+    padding: 2rem;
 }
 
-/* ==========================================================================
-   2. CARDS E SEÇÕES (Ex: Seção de Projetos ou Sobre Mim)
-   ========================================================================== */
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 .card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius);
-    padding: 24px;
-    margin-bottom: 20px;
-    transition: 
-        border-color var(--transition-speed) var(--transition-timing),
-        translate var(--transition-speed) var(--transition-timing),
-        box-shadow var(--transition-speed
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão Bonitão */
+.btn {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #1b5e20;
+}
+
+/* --- ESTILO DO MODAL (SAIBA MAIS) --- */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-conteudo {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    animation: abrirModal 0.4s ease;
+}
+
+/* Botão de Fechar (X) */
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.fechar:hover {
+    color: #000;
+}
+
+/* Animação para o modal aparecer suavemente */
+@keyframes abrirModal {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
