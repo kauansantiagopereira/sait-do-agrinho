@@ -3,72 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Agrinho 2026</title>
-    <style>
-        /* Estilos modernos e limpos com temática voltada à agricultura/tecnologia */
-        :root {
-            --cor-primaria: #2e7d32; /* Verde sustentável */
-            --cor-secundaria: #1b5e20;
-            --cor-fundo: #f4f6f4;
-            --cor-texto: #333333;
-            --cor-card: #ffffff;
-            --cor-borda: #e0e0e0;
-        }
+    <title>Projeto Agrinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--cor-fundo);
-            color: var(--cor-texto);
-            line-height: 1.6;
-        }
+    <header>
+        <h1>Meu Projeto Agrinho</h1>
+        <p>Inovação e sustentabilidade no campo</p>
+    </header>
 
-        header {
-            background-color: var(--cor-primaria);
-            color: white;
-            text-align: center;
-            padding: 2.5rem 1rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
+    <main class="container">
+        <section class="card">
+            <h2>Sobre o Projeto</h2>
+            <p>Este projeto foi desenvolvido para o Programa Agrinho, trazendo soluções inteligentes para o futuro da agricultura.</p>
+            <button id="btnSaibaMais" class="btn">Saiba mais</button>
+        </section>
+    </main>
 
-        header h1 {
-            margin: 0;
-            font-size: 2.6rem;
-            letter-spacing: 0.5px;
-        }
+    <div id="modalSustentabilidade" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Mais Informações sobre o Agrinho</h2>
+            <p>O Programa Agrinho incentiva o aprendizado, a sustentabilidade e a cidadania. Com a tecnologia, podemos otimizar o uso da água, reduzir desperdícios e proteger o nosso planeta!</p>
+            <p>Compartilhe essa ideia e faça a diferença na sua comunidade escolar.</p>
+        </div>
+    </div>
 
-        header p {
-            margin: 0.5rem 0 0 0;
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        section {
-            background: var(--cor-card);
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
-            border: 1px solid var(--cor-borda);
-        }
-
-        h2 {
-            color: var(--cor-secundaria);
-            border-bottom: 2px solid var(--cor-primaria);
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-            font-size: 1.6rem;
-        }
-
-        /* Melhoria na seção Sobre para alinhar texto e imagem */
-        .sobre-conteudo {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1
+    <script src="script.js"></script>
+</body>
+</html>
