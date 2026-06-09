@@ -9,14 +9,16 @@
 body {
     background-color: #f4f9f4;
     color: #333;
+    line-height: 1.6;
 }
 
-/* Topo do Site */
+/* Cabeçalho */
 header {
-    background-color: #2e7d32;
+    background-color: #2e7d32; /* Verde folha escuro */
     color: white;
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 header h1 {
@@ -24,22 +26,21 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
-/* Layout dos Cards */
+/* Layout Container */
 .container {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 2rem auto;
     padding: 0 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
 }
 
+/* Estilização dos Cards */
 .card {
     background: white;
-    padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-top: 5px solid #4caf50;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 5px solid #4caf50; /* Detalhe em verde */
 }
 
 .card h2 {
@@ -48,45 +49,58 @@ header h1 {
 }
 
 .card ul {
-    list-style-position: inside;
-    line-height: 1.8;
+    list-index.html-style: none;
+    padding-left: 0.5rem;
 }
 
-/* Estilos do Botão e Status (JavaScript) */
+.card li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.card li::before {
+    content: "🌱";
+    position: absolute;
+    left: 0;
+}
+
+/* Botão e Interatividade */
 button {
     background-color: #4caf50;
     color: white;
     border: none;
-    padding: 0.7rem 1.2rem;
-    border-radius: 4px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-    margin-top: 1rem;
     transition: background 0.3s;
+    margin-top: 1rem;
 }
 
 button:hover {
-    background-color: #2e7d32;
+    background-color: #388e3c;
 }
 
 #resultado {
     margin-top: 1rem;
-    padding: 0.8rem;
-    border-radius: 4px;
-    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
     font-weight: bold;
+    text-align: center;
 }
 
-.status-neutro { background-color: #eee; color: #666; }
-.status-seco { background-color: #ffcdd2; color: #b71c1c; }
-.status-umido { background-color: #c8e6c9; color: #1b5e20; }
+/* Status do Simulador */
+.status-neutro { background-color: #e0e0e0; color: #616161; }
+.status-seco { background-color: #ffe0b2; color: #e65100; border: 1px solid #b5651d; }
+.status-ideal { background-color: #c8e6c9; color: #1b5e20; }
 
 /* Rodapé */
 footer {
     text-align: center;
     padding: 1.5rem;
-    background-color: #2e7d32;
+    background-color: #333;
     color: white;
+    font-size: 0.9rem;
     margin-top: 3rem;
 }
